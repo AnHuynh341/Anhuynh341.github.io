@@ -24,7 +24,9 @@ hr {
     display: flex;
     justify-content: start;
     align-items: center;
-
+    position: fixed;
+    top:0;
+    width: 100%;
 }
 
 #search-input {
@@ -48,6 +50,7 @@ hr {
 }
 
 .voice-search {
+    border-radius: 50%;
     float: right;
     position: absolute;
     height: 48px;
@@ -81,10 +84,11 @@ hr {
 
 
 .menu-bars {
-    margin-left: 3.5rem;
+    margin-left: 4rem;
     font-size: 2rem;
     color: #fff;
 }
+
 
 #nav-menu {
     background-color: #212121;
@@ -184,7 +188,7 @@ hr {
 
 .flexbox-container {
     display: flex;
-    margin-top: 25px;
+    margin-top: 80px;
     margin-left: 30px;
 }
  .flexbox-main-section {
@@ -222,6 +226,7 @@ hr {
     color: #ffff;
     font-size: 15px;
     margin-left: 70px;
+    margin-top: 20px;
   }
   
   #desc2 {
@@ -269,7 +274,7 @@ hr {
 
   .views_count {
       margin-top: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       text-decoration: none;
       display: inline-flex;
       width: 100%;
@@ -283,9 +288,9 @@ hr {
   }
 
   .like_btn {
-      font-size: 16px;
+      font-size: 14px;
       display: inline-flex;
-      margin-left: 29%;
+      margin-left: 31%;
   }
 
   #likescount {
@@ -294,10 +299,67 @@ hr {
       color: #fff;
   }
 
+  .channel_subs {
+    width: 100%;
+    height: 60px;
+}
+
+  .rickastley {
+      float: left;
+      flex-direction: row;
+      margin-top: 20px;
+      width: 600px;
+      height: 52px;
+  }
   .rickastley img {
-      width: 100%;
+      width: 50px;
+      height: auto;
+      border-radius: 50%;
+      margin-right: 20px;
   }
 
+ 
+  .channel {
+      width: 210px;
+      height: 100%;
+  }
+
+  #channelname a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 15px;
+  }
+
+  #sub_count {
+      text-decoration: none;
+      color: #909090;
+      font-size: 13px;
+      margin-top: 3px;
+  }
+
+  .subsbutton {
+      margin-left: 30px;
+      width: 150px;
+      height: 36px;
+      float: right;
+      margin-right: 7px;
+  }
+
+  .subsbutton img {
+    width: 117px;
+    height: 100%;
+    margin-top: 20px;
+  }
+
+  
+  .subsbtnicon a {
+      text-decoration: none;
+      color: #fff;
+      float: right;
+      margin-top: 30px;
+      
+  }
+  
 
 .sidewrap {
     width: 95%;
@@ -335,7 +397,7 @@ hr {
     text-decoration: none;
     color: #909090;
     font-size: 12px;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 .artist a {
@@ -348,6 +410,6 @@ hr {
     text-decoration: none;
     color:#909090;
     font-size: 12px;
-    margin-top: 8px;
+    margin-top: 5px;
 }
 
