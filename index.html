@@ -1,597 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Rick Astley - Never Gonna Give You Up</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    </head>
-    <body>
-        <div id="navbar">
-            <a href="#" class="menu-bars" id="show-menu">
-            <i class="fas fa-bars"></i>
-            </a>    
-            <a href="#"><h1><i class="fab fa-youtube" id="youtube-logo"></i> Youtube</h1></a>
-                <form>
-                    <input type="text" name="search" id="search-input" placeholder="search">
-                    <a href="#"> <img src="images/search.jpg" alt="search icon" class="search-icon"> </a>
-                    <a href="#"> <img src="images/voice-search.jpg" alt="voice search" class="voice-search"> </a>
-                    <div class="nav-btn">
-                        <i class="nav-btnicon"><a href="#"><i class="fas fa-video"></i></a></i> 
-                        <i class="nav-btnicon"><a href="#"><i class="fas fa-th"></i></a></i> 
-                        <i class="nav-btnicon"><a href="#"><i class="far fa-bell"></i></a></i> 
-                    </div>
-                    <a href="#"> <img src="images/avt.jpg" alt="avt" class="avatar"> </a>
-                </form>
+<html>
+<head>
+	<title>module</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="main">
+    <div class="ss_appliances">
+        
+        <div class="ss_appliance" id="liv_light">
+            <input type="checkbox" name="a" id="a">
+            <label for="a">
+                <i class="fa fa-lightbulb"></i>
+                <strong>Light</strong>
+                <span data-o="On" data-c="off"></span>
+                <small></small>
+            </label>
+        </div>
+        
+        <div class="ss_appliance" id="wifi">
+            <input type="checkbox" name="a" id="b">
+            <label for="b">
+                <i class="fa fa-wifi"></i>
+                <strong>Wi-fi</strong>
+                <span data-o="On" data-c="off"></span>
+                <small></small>
+            </label>
+        </div>
+    </div>
+
+    <div class="popup" id="popup" >
+         <span id="popup_msg" ></span>
+        
+        <div class="close" >
+            <i id="close_popup" class="fa fa-times" ></i>
+        </div>
+    </div>
+
+    <div class="display_container">
+        <div class="temp">
+            <p>Temperature: </p>
+            <span id="temperature"> 30</span>°C
         </div>
 
-        <nav id="nav-menu">
-            <ul class="nav-menu-items">
-                <div id="navbar-toggle">
-                  <a href="#" class="menu-bars" id="hide-menu">
-                    <i class="fas fa-bars nav-icon"></i>
-                </a>  
-                <a href="#"><h1><i class="fab fa-youtube" id="youtube-logo"></i> Youtube</h1></a>
-                </div>
-                <hr />
-                <div class="nav-section">
-                    <li class="nav-text"><a href="#"><i class="fas fa-home nav-icon"></i><a href="https://www.youtube.com">Home</a></a></li>
-                    <li class="nav-text"><a href="#"><i class="fas fa-compass nav-icon"></i><a href="https://www.youtube.com/feed/explore">Explore</a></a></li>
-                    <li class="nav-text"><a href="#"><i class="fab fa-scribd nav-icon"></i><a href="https://www.youtube.com/shorts/1u_b55rvqno">Shorts</a></a></li>
-                    <li class="nav-text"><a href="#"><i class="fab fa-youtube nav-icon"></i><a href="https://www.youtube.com/feed/subscriptions">Subscription</a></a></li>
-                </div>
-                <hr/>
-                <div class="nav-section">
-                    <li class="nav-text"><a href="#"><i class="fas fa-play-circle nav-icon"></i><a href="https://www.youtube.com/feed/library">Library</a></a></li>
-                    <li class="nav-text"><a href="#"><i class="fas fa-history nav-icon"></i><a href="https://www.youtube.com/feed/history">History</a></a></li>
-                    <li class="nav-text"><a href="#"><i class="fas fa-caret-square-right nav-icon"></i><a href="https://studio.youtube.com/channel/UCkbbM-GguUdLZFrQz5SPxuA/videos">Your videos</a></a></li>
-                    <li class="nav-text"><a href="#"><i class="fas fa-clock nav-icon"></i><a href="https://www.youtube.com/playlist?list=WL">Watch later</a></a></li>
-                    <li class="nav-text"><a href="#"><i class="fas fa-cut nav-icon"></i><a href="https://www.youtube.com/feed/clips">Your clips</a></a></li>
-                    <li class="nav-text"><a href="#"><i class="fas fa-thumbs-up nav-icon"></i><a href="https://www.youtube.com/playlist?list=LL">Liked video</a></a></li>
-                    <li class="nav-text"><a href="#"><i class="fas fa-list nav-icon"></i><a href="https://www.youtube.com/playlist?list=FLkbbM-GguUdLZFrQz5SPxuA">Favorite</a></a></li>
-                </div>
-            </ul>
-        </nav>
-        <script src="app.js"></script>
-
-        <div class="flexbox-container">
-            <div class="flexbox-main-section">
-                <div class="main-video">
-                    <iframe
-                    width="100%"
-                    height="575px"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?&autoplay=1"
-                    allow="autoplay">
-                    </iframe>
-                </div>
-
-                <div class="title">
-                    <p id="hashtag">
-                      #RickAstley #NeverGonnaGiveYouUp #WheneverYouNeedSomebody
-                    </p>
-                    <p id="main-title">
-                      Rick Astley - Never Gonna Give You Up (Official Music Video)
-                    </p>
-                </div>
-
-                <div class="views_count">
-                    <p id="views"> 1,165,597,359 views • Oct 25, 2009 </p>
-                    <div class="like_btn">
-                        <p id="likescount"><i class="fas fa-thumbs-up"></i> &nbsp13M</p>
-                        <p id="likescount"><i class="fas fa-thumbs-down"></i>  &nbspDISLIKE</p>
-                        <p id="likescount"><i class="fas fa-share"></i> &nbspSHARE</p>
-                        <p id="likescount"><i class="fas fa-cut"></i> &nbspCLIP</p>
-                        <p id="likescount"><i class="fas fa-list"></i> &nbspSAVE</p>
-                        <p id="likescount"><i class="fas fa-ellipsis-h"></i> </p>
-                    </div>
-                    
-                </div>
-
-                <hr />
-
-                <div class="channel_subs">
-                    <div class="rickastley">
-                        <a href="https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw"><img id="rickastley" src="images/rickastley_avt.jpg" alt="rickastley" style="float: left;"/>  </a>
-                        <div class="channel" style="float: inline-end;">
-                            <p id="channelname"> 
-                                <a href=#>
-                                    <a href="https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw">
-                                        Rick Astley ♪
-                                    </a>
-                                </a> 
-                            </p>
-                            <p id="sub_count"> 2.97M subscribers </p>
-                        </div>     
-                    </div>
-
-                    <div class="subsbutton">
-                        <img src="images/subsbtn.jpg" />
-                        <i class="subsbtnicon"><a href="#"><i class="far fa-bell"></i></a></i> 
-                    </div>
-
-
-                </div>
-
-                <div class="desc">
-                    <p id="desc1">
-                      The official video for “Never Gonna Give You Up” by Rick Astley
-                    </p>
-                    <br />
-                    <p id="desc2">
-                      “Never Gonna Give You Up” was a global smash on its release in July 1987, topping the charts in 25
-                    </p>
-                    <div class="showmore">
-                      <p id="more">SHOW MORE</p>
-                    </div>
-                </div>
-
-                <img class="cmt-img" src="images/cmt-section.jpg" alt="cmtsection" />
-
-
-            </div>
-
-
-            <div class="flexbox-side-videos">
-                <div class="suggest">
-                    <img class="suggest" src="images/suggest-btn.jpg" alt="suggestbtn" />
-                </div>
-                
-
-
-
-
-                <div class="sidewrap">  <!--video 1-->
-
-                    <a href="https://www.youtube.com/watch?v=_mkiGMtbrPM"><img src="images/sidevideos/side_1.jpg" style="float: left;"/> </a>
-
-                    <p class="sidetitle" >
-                        <a href="#">
-                           <a href="https://www.youtube.com/watch?v=_mkiGMtbrPM" >  
-                                   WORLD ORDER "HAVE A NICE DAY"
-                           </a>
-                       </a>
-                    </p>
-                                       
-                    <p class="artist">
-                        <a href="#">
-                            <a href="https://www.youtube.com/channel/UCI4fJYWKcGa8MvnvLw0qysQ">
-                             WORLD ORDER ♪
-                            </a>
-                        </a>
-                    </p>
-                   
-                    <p class="time-views">
-                        40M views • 7 years ago
-                    </p>
-
-                </div>
-
-
-                <div class="sidewrap">  <!--video 2-->
-
-                    <a href="https://www.youtube.com/watch?v=WTJSt4wP2ME"><img src="images/sidevideos/side_2.jpg" style="float: left;"/> </a>
-
-                    <p class="sidetitle" >
-                        <a href="#">
-                           <a href="https://www.youtube.com/watch?v=WTJSt4wP2ME" >  
-                            K'NAAN - Wavin' Flag (Coca-Cola Celebration Mix)
-                           </a>
-                       </a>
-                    </p>
-                                       
-                    <p class="artist">
-                        <a href="#">
-                            <a href="https://www.youtube.com/channel/UCZcmnai64lvrmqPHxdUJofQ">
-                                K'naan Warsame ♪
-                            </a>
-                        </a>
-                    </p>
-                   
-                    <p class="time-views">
-                        351M views • 12 years ago
-                    </p>
-
-                </div>
-
-
-                <div class="sidewrap">  <!--video 3-->
-
-                    <a href="https://www.youtube.com/watch?v=LYFciXBcXIQ"><img src="images/sidevideos/side_3.jpg" style="float: left;"/> </a>
-
-                    <p class="sidetitle" >
-                        <a href="#">
-                           <a href="https://www.youtube.com/watch?v=LYFciXBcXIQ" >  
-                            「3時12分 / TAKU INOUE & 星街すいせい」MUSIC VIDEO
-                           </a>
-                       </a>
-                    </p>
-                                       
-                    <p class="artist">
-                        <a href="#">
-                            <a href="https://www.youtube.com/channel/UCICy3BC4CIU2OXa7VGoektw">
-                                TAKU INOUE ♪
-                            </a>
-                        </a>
-                    </p>
-                   
-                    <p class="time-views">
-                        2.3M views • 7 months ago
-                    </p>
-
-                </div>
-
-
-                <div class="sidewrap">  <!--video 4-->
-
-                    <a href="https://www.youtube.com/watch?v=a51VH9BYzZA"><img src="images/sidevideos/side-4.jpg" style="float: left;"/> </a>
-
-                    <p class="sidetitle" >
-                        <a href="#">
-                           <a href="https://www.youtube.com/watch?v=LYFciXBcXIQ" >  
-                            Stellar Stellar / 星街すいせい(official)
-                           </a>
-                       </a>
-                    </p>
-                                       
-                    <p class="artist">
-                        <a href="#">
-                            <a href="https://www.youtube.com/channel/UC5CwaMl1eIgY8h02uZw7u8A">
-                                Suisei Channel ✓
-                            </a>
-                        </a>
-                    </p>
-                   
-                    <p class="time-views">
-                        7.2M views • 5 months ago
-                    </p>
-
-                </div>
-
-
-                <div class="sidewrap">  <!--video 5-->
-
-                    <a href="https://www.youtube.com/watch?v=fJ9rUzIMcZQ"><img src="images/sidevideos/side_5.jpg" style="float: left;"/> </a>
-
-                    <p class="sidetitle" >
-                        <a href="#">
-                           <a href="https://www.youtube.com/watch?v=fJ9rUzIMcZQ" >  
-                            Queen – Bohemian Rhapsody (Official Video Remastered)
-                           </a>
-                       </a>
-                    </p>
-                                       
-                    <p class="artist">
-                        <a href="#">
-                            <a href="https://www.youtube.com/channel/UCiMhD4jzUqG-IgPzUmmytRQ">
-                                Queen Official ♪
-                            </a>
-                        </a>
-                    </p>
-                   
-                    <p class="time-views">
-                        1.4B views • 13 years ago
-                    </p>
-
-                </div>
-
-
-                <div class="sidewrap">  <!--video 6-->
-
-                    <a href="https://www.youtube.com/watch?v=171skzi5BKc"><img src="images/sidevideos/side_6.jpg" style="float: left;"/> </a>
-
-                    <p class="sidetitle" >
-                        <a href="#">
-                           <a href="https://www.youtube.com/watch?v=171skzi5BKc" >  
-                            Queen - Made In Heaven (Official Lyric Video)
-                           </a>
-                       </a>
-                    </p>
-                                       
-                    <p class="artist">
-                        <a href="#">
-                            <a href="https://www.youtube.com/channel/UCiMhD4jzUqG-IgPzUmmytRQ">
-                                Queen Official ♪
-                            </a>
-                        </a>
-                    </p>
-                   
-                    <p class="time-views">
-                        11M views • 7 years ago
-                    </p>
-
-                </div>
-
-
-                <div class="sidewrap">  <!--video 7-->
-
-                    <a href="https://www.youtube.com/watch?v=t-_VPRCtiUg"><img src="images/sidevideos/side_7.jpg" style="float: left;"/> </a>
-
-                    <p class="sidetitle" >
-                        <a href="#">
-                           <a href="https://www.youtube.com/watch?v=t-_VPRCtiUg" >  
-                            The Surprising Secret of Synchronization
-                           </a>
-                       </a>
-                    </p>
-                                       
-                    <p class="artist">
-                        <a href="#">
-                            <a href="https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA">
-                                Veritasium ✓
-                            </a>
-                        </a>
-                    </p>
-                   
-                    <p class="time-views">
-                        16M views • 11 months ago
-                    </p>
-
-                </div>
-
-
-                <div class="sidewrap">  <!--video 8-->
-
-                    <a href="https://www.youtube.com/watch?v=S-8IHK4ujvk"><img src="images/sidevideos/side_8.jpg" style="float: left;"/> </a>
-
-                    <p class="sidetitle" >
-                        <a href="#">
-                           <a href="https://www.youtube.com/watch?v=S-8IHK4ujvk" >  
-                             2:23 AM                           
-                            </a>
-                       </a>
-                    </p>
-                                       
-                    <p class="artist">
-                        <a href="#">
-                            <a href="https://www.youtube.com/channel/UCfjca6Z_wpyinTqHdIYJ49Q">
-                                しゃろう Sharou ✓
-                            </a>
-                        </a>
-                    </p>
-                   
-                    <p class="time-views">
-                        572K views • 10 months ago
-                    </p>
-
-                </div>
-
-
-                <div class="sidewrap">  <!--video 9-->
-
-                    <a href="https://www.youtube.com/watch?v=k8RkyaSHFLM"><img src="images/sidevideos/side_9.jpg" style="float: left;"/> </a>
-
-                    <p class="sidetitle" >
-                        <a href="#">
-                           <a href="https://www.youtube.com/watch?v=k8RkyaSHFLM" >  
-                                Apple makes my brain hurt…                          
-                            </a>
-                       </a>
-                    </p>
-                                       
-                    <p class="artist">
-                        <a href="#">
-                            <a href="https://www.youtube.com/channel/UCXuqSBlHAE6Xw-yeJA0Tunw">
-                                Linus Tech Tips ✓
-                            </a>
-                        </a>
-                    </p>
-                   
-                    <p class="time-views">
-                        1.7M views • 5 days ago
-                    </p>
-
-                </div>
-
-
-                <div class="sidewrap">  <!--video 10-->
-
-                    <a href="https://www.youtube.com/watch?v=Z5JC9Ve1sfI"><img src="images/sidevideos/side_10.jpg" style="float: left;"/> </a>
-
-                    <p class="sidetitle" >
-                        <a href="#">
-                           <a href="https://www.youtube.com/watch?v=Z5JC9Ve1sfI" >  
-                            The Fetch-Execute Cycle: What's Your Computer Actually Doing?                         
-                            </a>
-                       </a>
-                    </p>
-                                       
-                    <p class="artist">
-                        <a href="#">
-                            <a href="https://www.youtube.com/channel/UCBa659QWEk1AI4Tg--mrJ2A">
-                                Tom Scott ✓
-                            </a>
-                        </a>
-                    </p>
-                   
-                    <p class="time-views">
-                        1.2M views • 2 years ago
-                    </p>
-
-                </div>
-
-
-                <div class="sidewrap">  <!--video 11-->
-
-                    <a href="https://www.youtube.com/watch?v=p3q5zWCw8J4"><img src="images/sidevideos/side_11.jpg" style="float: left;"/> </a>
-
-                    <p class="sidetitle" >
-                        <a href="#">
-                           <a href="https://www.youtube.com/watch?v=p3q5zWCw8J4" >  
-                            How computer memory works - Kanawat Senanan                       
-                            </a>
-                       </a>
-                    </p>
-                                       
-                    <p class="artist">
-                        <a href="#">
-                            <a href="https://www.youtube.com/channel/UCsooa4yRKGN_zEE8iknghZA">
-                                TED-Ed ✓
-                            </a>
-                        </a>
-                    </p>
-                   
-                    <p class="time-views">
-                        2.6M views • 5 years ago
-                    </p>
-
-                </div>
-
-
-                <div class="sidewrap">  <!--video 12-->
-
-                    <a href="https://www.youtube.com/watch?v=AAr2lHZLNyU"><img src="images/sidevideos/side_12.jpg" style="float: left;"/> </a>
-
-                    <p class="sidetitle" >
-                        <a href="#">
-                           <a href="https://www.youtube.com/watch?v=AAr2lHZLNyU" >  
-                            ディスコミュ星人/兎田ぺこら(cover)                      
-                            </a>
-                       </a>
-                    </p>
-                                       
-                    <p class="artist">
-                        <a href="#">
-                            <a href="https://www.youtube.com/channel/UC1DCedRgGHBdm81E1llLhOQ">
-                                Pekora Ch. 兎田ぺこら ✓
-                            </a>
-                        </a>
-                    </p>
-                   
-                    <p class="time-views">
-                        15M views • 1 years ago
-                    </p>
-
-                </div>
-
-
-                <div class="sidewrap">  <!--video 13-->
-
-                    <a href="https://www.youtube.com/watch?v=0firv69LkgI"><img src="images/sidevideos/side_13.jpg" style="float: left;"/> </a>
-
-                    <p class="sidetitle" >
-                        <a href="#">
-                           <a href="https://www.youtube.com/watch?v=0firv69LkgI" >  
-                            灰色と青/常闇トワ×星街すいせい(cover)                   
-                            </a>
-                       </a>
-                    </p>
-                                       
-                    <p class="artist">
-                        <a href="#">
-                            <a href="https://www.youtube.com/channel/UC1uv2Oq6kNxgATlCiez59hw">
-                                Towa Ch. 常闇トワ ✓
-                            </a>
-                        </a>
-                    </p>
-                   
-                    <p class="time-views">
-                        2.9M views • 2 months ago
-                    </p>
-
-                </div>
-
-
-
-                <div class="sidewrap">  <!--video 14-->
-
-                    <a href="https://www.youtube.com/watch?v=gJX2iy6nhHc"><img src="images/sidevideos/side_14.jpg" style="float: left;"/> </a>
-
-                    <p class="sidetitle" >
-                        <a href="#">
-                           <a href="https://www.youtube.com/watch?v=gJX2iy6nhHc" >  
-                            米津玄師 MV「 灰色と青（ ＋菅田将暉 ）」                 
-                            </a>
-                       </a>
-                    </p>
-                                       
-                    <p class="artist">
-                        <a href="#">
-                            <a href="https://www.youtube.com/channel/UC1uv2Oq6kNxgATlCiez59hw">
-                                米津玄師 ♪
-                            </a>
-                        </a>
-                    </p>
-                   
-                    <p class="time-views">
-                        232M views • 4 years ago
-                    </p>
-
-                </div>
-
-
-                <div class="sidewrap">  <!--video 15-->
-
-                    <a href="https://www.youtube.com/watch?v=dy90tA3TT1c"><img src="images/sidevideos/side_15.jpg" style="float: left;"/> </a>
-
-                    <p class="sidetitle" >
-                        <a href="#">
-                           <a href="https://www.youtube.com/watch?v=dy90tA3TT1c" >  
-                            YOASOBI「怪物」Official Music Video　(YOASOBI - Monster)                 
-                            </a>
-                       </a>
-                    </p>
-                                       
-                    <p class="artist">
-                        <a href="#">
-                            <a href="https://www.youtube.com/channel/UCvpredjG93ifbCP1Y77JyFA">
-                                Ayase / YOASOBI ♪
-                            </a>
-                        </a>
-                    </p>
-                   
-                    <p class="time-views">
-                        194M views • 1 years ago
-                    </p>
-
-                </div>
-
-
-                <div class="sidewrap">  <!--video 16-->
-
-                    <a href="https://www.youtube.com/watch?v=L2gT8fbEq54"><img src="images/sidevideos/side_16.jpg" style="float: left;"/> </a>
-
-                    <p class="sidetitle" >
-                        <a href="#">
-                           <a href="https://www.youtube.com/watch?v=L2gT8fbEq54" >  
-                            A few things Apple hasn't told you... - iPhone 13 Pro Max Durabil...                
-                            </a>
-                       </a>
-                    </p>
-                                       
-                    <p class="artist">
-                        <a href="#">
-                            <a href="https://www.youtube.com/channel/UCWFKCr40YwOZQx8FHU_ZqqQ">
-                                JerryRigEverything ✓
-                            </a>
-                        </a>
-                    </p>
-                   
-                    <p class="time-views">
-                        5.4M views • 5 months ago
-                    </p>
-
-                </div>
-
-
-
-
-
-                       
-                       
-
-            </div>
-
-
-
-                  
-                   
- 
-
-
-                                
-          
-
+        <div class="humid">
+            <p>Humidity: </p>
+            <span id="humidity"> 65</span>%
         </div>
-    </body>
+    </div>
+
+
+    <div class="set_threshold">					
+            <p>Set threshold</p>
+    
+
+        <div class="updown_threshold" >
+            <p>Temperature threshold</p>
+            <input type="range" min="20" max="50" value="30" id="set_up_threshold">
+            <span id="up_threshold" >30</span>°C
+            <p>Humidity threshold</p>
+            <input type="range" min="0" max="100" value="65" id="set_down_threshold">
+            <span id="down_threshold" >65</span> %
+        </div>   
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
 </html>
