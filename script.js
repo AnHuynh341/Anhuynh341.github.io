@@ -99,13 +99,15 @@ let down_threshold = document.getElementById('down_threshold');
 
 set_up_threshold.oninput = function(){
 	up_threshold.innerHTML = set_up_threshold.value;
+	console.log("Temperature threshold: " + Number(set_up_threshold.value));
 	database.ref("/LivingRoom").update({
-		"TempThres" : set_up_threshold.value
+		"TempThres" : Number(set_up_threshold.value)
 	});
 }
 set_down_threshold.oninput = function(){
 	down_threshold.innerHTML = set_down_threshold.value;
+	console.log("Humidity threshold: " + Number(set_down_threshold.value));
 	database.ref("/LivingRoom").update({
-		"HumThres" : set_down_threshold.value
+		"HumThres" : Number(set_down_threshold.value)
 	});
 }
