@@ -1,5 +1,11 @@
 const firebaseConfig = {
-
+    apiKey: "AIzaSyC87A38QuE8E06DE9ceJc95G724zz0Ledw",
+    authDomain: "anhuynhsmarthome.firebaseapp.com",
+    databaseURL: "https://anhuynhsmarthome-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "anhuynhsmarthome",
+    storageBucket: "anhuynhsmarthome.appspot.com",
+    messagingSenderId: "451784600525",
+    appId: "1:451784600525:web:889e6bfbcdc29ca791f284"
   };
   firebase.initializeApp(firebaseConfig);
   var database = firebase.database();
