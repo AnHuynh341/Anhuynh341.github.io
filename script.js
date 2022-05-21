@@ -14,7 +14,20 @@ const firebaseConfig = {
 
 let liv_light = document.getElementById('liv_light');
 let wifi = document.getElementById('wifi');
-let a = 0, b =0;
+let  a=0, b =0;
+
+database.ref("/LivingRoom/Temperature").on("value", function(snapshot) {
+	var Temp=snapshot.val();
+	document.getElementById("temperature").innerHTML=Temp;
+	console.log("Temp is: " + Temp);
+});
+
+database.ref("/LivingRoom/Humidity").on("value", function(snapshot) {
+	var Hum=snapshot.val();
+	document.getElementById("humidity").innerHTML=Hum;
+	console.log("Hum is: " +Hum);
+});
+
 
 liv_light.onclick = function(){
 	a+=0.5;
