@@ -1,3 +1,17 @@
+const firebaseConfig = {
+    apiKey: "AIzaSyC87A38QuE8E06DE9ceJc95G724zz0Ledw",
+    authDomain: "anhuynhsmarthome.firebaseapp.com",
+    databaseURL: "https://anhuynhsmarthome-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "anhuynhsmarthome",
+    storageBucket: "anhuynhsmarthome.appspot.com",
+    messagingSenderId: "451784600525",
+    appId: "1:451784600525:web:889e6bfbcdc29ca791f284"
+  };
+  firebase.initializeApp(firebaseConfig);
+  var database = firebase.database();
+
+
+
 let liv_light = document.getElementById('liv_light');
 let wifi = document.getElementById('wifi');
 let a = 0, b =0;
@@ -6,6 +20,9 @@ liv_light.onclick = function(){
 	a+=0.5;
 	if (a%2 == 1) {
 		console.log("Light on");
+		database.ref("/LivingRoom").update({
+            "Led_1" : 1
+        });
 		popup_wipeup();
 	 	popup_msg.innerHTML = "Light is on";
 	 	setTimeout(
@@ -15,6 +32,9 @@ liv_light.onclick = function(){
 	}
 	if (a%2 ==0) {
 		console.log("Light off");
+		database.ref("/LivingRoom").update({
+            "Led_1" : 0
+        });
 		popup_wipeup();
 	 	popup_msg.innerHTML = "Light is off";
 	 	setTimeout(
