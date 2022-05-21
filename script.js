@@ -49,6 +49,9 @@ wifi.onclick = function(){
 	
 	if (b%2 == 1) {
 		console.log("Wifi on");
+		database.ref("/LivingRoom").update({
+            "Led_2" : 1
+        });
 		popup_wipeup();
 	 	popup_msg.innerHTML = "Wifi is on";
 	 	setTimeout(
@@ -58,6 +61,9 @@ wifi.onclick = function(){
 	}
 	if (b%2 ==0) {
 		console.log("Wifi off");
+		database.ref("/LivingRoom").update({
+            "Led_2" : 0
+        });
 		popup_wipeup();
 	 	popup_msg.innerHTML = "Wifi is off";
 	 	setTimeout(
@@ -93,9 +99,13 @@ let down_threshold = document.getElementById('down_threshold');
 
 set_up_threshold.oninput = function(){
 	up_threshold.innerHTML = set_up_threshold.value;
-	
+	database.ref("/LivingRoom").update({
+		"TempThres" : set_up_threshold.value
+	});
 }
 set_down_threshold.oninput = function(){
 	down_threshold.innerHTML = set_down_threshold.value;
-	
+	database.ref("/LivingRoom").update({
+		"HumThres" : set_down_threshold.value
+	});
 }
