@@ -1,77 +1,195 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>AnHuynh Smart Home</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/font/fontawesome/css/all.min.css">
+    <title>Document</title>
 </head>
 <body>
+  
+    <header class="header">
+        <div class="logo">
+          <a href="#">TRACKING PLANTS</a>
+          <div class="search_box">
+            <input type="text" placeholder="Search ">
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+        <div id="txt"></div>
+        <div class="header-icons">
+          <i class="fas fa-bell"></i>
+          <div class="account">
+            <h4>PROJECT 2</h4>
+          </div>
+        </div> 
+    </header>
+    
+    <div class="main-body">
+        <h2>Member : Khuong An - Duc Anh </h2>     
+    </div>   
+   
+    <div class="control">
+      <div class="mode">
+        <h2>MODE</h2>
 
-<div class="main">
-    <div class="ss_appliances">
+
+        <div class="custom-checkbox">
+          <input id="status" 
+                 type="checkbox" 
+                 name="status">
+          <label for="status">
+            <div class="status-switch"
+                 data-unchecked="MANUAL"
+                 data-checked="AUTO">
+            </div>
+          </label>
+        </div>
+
         
-        <div class="ss_appliance" id="liv_light">
-            <input type="checkbox" name="a" id="a">
-            <label for="a">
-                <i class="fa fa-lightbulb"></i>
-                <strong>Light</strong>
-                <span data-o="On" data-c="off"></span>
-                <small></small>
+
+      </div>
+      
+      <div class="mode_manual">
+        <div id="manual">
+          <h2>PUMP CONTROL</h2>
+          
+        </div>
+        
+        <div class="ss_appliances">
+          <div class="ss_appliance" id="pump">
+            <input type="checkbox" name="a" id="c">
+            <label for="c">
+              <i class='fa fa-pump-soap'></i>
+              <strong>Pump</strong>
+              <span data-o="On" data-c="off"></span>
+              <small></small>
             </label>
+          </div>
         </div>
-        
-        <div class="ss_appliance" id="wifi">
-            <input type="checkbox" name="a" id="b">
-            <label for="b">
-                <i class="fa fa-wifi"></i>
-                <strong>Wi-fi</strong>
-                <span data-o="On" data-c="off"></span>
-                <small></small>
-            </label>
+      </div>
+      <div class="Soil">
+        <div class="display_soil">
+          <div class="temp_soil">
+              <p>Temperature: </p>
+              <span id="temperature"> 30</span>°C
+          </div>
+  
+          <div class="air_humi">
+              <p>Air Humidity: </p>
+              <span id="humidity"> 65</span>%
+          </div>
+
+          <div class="sensor_soil">
+            <p>Soil Moisture: </p>
+            <span id="soilMois"> 55</span>%
+          </div>
+
         </div>
+      </div>
     </div>
-
-    <div class="popup" id="popup" >
-         <span id="popup_msg" ></span>
-        
-        <div class="close" >
-            <i id="close_popup" class="fa fa-times" ></i>
+    <div class="app-body">
+        <div class="app-bodyContent active">
+          <div class="app-tabs">
+            <button class="tab active">
+              <p id="tab1">Plant 1</p>
+            </button>
+          </div>
+          <div class="tab-content">
+            <div class="tab-pane ">
+              <div class="display_container">
+                <div class="temp">
+                  <p>Temperature: </p>
+                  <span class="temperature" id="nhietdo"> 34°C</span>
+                </div>
+  
+                <div class="humid">
+                  <p>Moisture: </p>
+                  <span class="humidity" id="doam"> 40%</span>
+                </div>
+              </div>
+              <div class="img-tree">
+                <span id="name1">Sunflower Plants</span>
+                <img src="./assets/img/hoaHD.jpg" alt="">
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-
-    <div class="display_container">
-        <div class="temp">
-            <p>Temperature: </p>
-            <span id="temperature"> 30</span>°C
+        <div class="app-bodyContent">
+            <div class="app-tabs">
+              <button class="tab">
+                <p id="tab2">Plant 2</p>
+              </button>
+            </div>
+            <div class="tab-content">
+              <div class="tab-pane ">
+                <div class="display_container">
+                  <div class="temp">
+                    <p>Temperature: </p>
+                    <span class="temperature" id="nhietdo"> 21°C</span>
+                  </div>
+    
+                  <div class="humid">
+                    <p>Moisture: </p>
+                    <span class="humidity" id="doam"> 35%</span>
+                  </div>
+                </div>
+                <div class="img-tree">
+                  <span id="name2">Coffee Tree</span>
+                  <img src="./assets/img/caphe.jpg" alt="">
+                </div>
+              </div>
+            </div>
         </div>
+        <div class="app-bodyContent">
+            <div class="app-tabs">
+              <button class="tab">
+                <p id="tab3">Plant 3</p>
+              </button>
+            </div>
+            <div class="tab-content">
+              <div class="tab-pane ">
+                <div class="display_container">
+                  <div class="temp">
+                    <p>Temperature: </p>
+                    <span class="temperature" id="nhietdo"> 35°C</span>
+                  </div>
+    
+                  <div class="humid">
+                    <p>Moisture: </p>
+                    <span class="humidity" id="doam"> 46%</span>
+                  </div>
+                </div>
+                <div class="img-tree">
+                  <span id="name3">Rice crops</span>
+                  <img src="./assets/img/lua.jpg" alt="">
+                </div>
+              </div>
+            </div>
+        </div>  
 
-        <div class="humid">
-            <p>Humidity: </p>
-            <span id="humidity"> 65</span>%
-        </div>
     </div>
-
-
-    <div class="set_threshold">		
-         <div class="title">			
-            <p>Set threshold</p>
-         </div> 
-
-        <div class="updown_threshold" >
-            <p>Temperature threshold</p>
-            <input type="range" min="20" max="50" value="30" id="set_up_threshold">
-            <span id="up_threshold" >30</span>°C
-            <p>Humidity threshold</p>
-            <input type="range" min="0" max="100" value="65" id="set_down_threshold">
-            <span id="down_threshold" >65</span> %
-        </div>   
-    </div>
-
-</div>
-<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
-<script src="script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>    
+      <script>
+        const $ = document.querySelector.bind(document)
+        const $$ = document.querySelectorAll.bind(document)
+  
+        const tabs = $$('.tab')
+        const tabPanes = $$('.app-bodyContent')
+        tabs.forEach(function (tab, index) {
+          const tabPane = tabPanes[index]
+          tab.onclick = function () {
+            $('.tab.active').classList.remove("active")
+             $('.app-bodyContent.active').classList.remove("active")
+  
+            this.classList.toggle("active")
+            tabPane.classList.toggle("active")
+          }
+        })
+      </script>
+      <script src="app.js"></script>
 </body>
 </html>
